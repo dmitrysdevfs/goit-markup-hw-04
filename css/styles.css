@@ -29,6 +29,7 @@
   --secondary-accent-color: #188ce8;
   --primary-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
+  --hero-background-color: #c4c4c4;
   --footer-background-color: #2f303a;
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --projects-card-border-color: #eeeeee;
@@ -98,11 +99,6 @@ img {
 
 .bottom-logo {
   color: var(--contrast-accent-color);
-}
-
-.hero-section,
-.footer {
-  background-color: var(--footer-background-color);
 }
 
 .title {
@@ -188,7 +184,8 @@ img {
     url(../images/hero-bg-img.jpg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;
+  /* background-size: cover; */
+  background-color: var(--hero-background-color);
 }
 
 .main-title {
@@ -330,6 +327,7 @@ img {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--footer-background-color);
 }
 
 /* .footer .contacts {
