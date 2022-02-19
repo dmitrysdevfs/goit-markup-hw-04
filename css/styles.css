@@ -34,6 +34,7 @@
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --projects-card-border-color: #eeeeee;
   --section-border-color: #eeeeee;
+  --social-list-icon-color: #afb1b8;
 }
 
 body {
@@ -110,6 +111,38 @@ img {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-list-icon {
+  fill: var(--social-list-icon-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--primary-accent-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--contrast-accent-color);
+}
+
+.social-list-link:
+
+.social-list-link:hover .
 /* ======= END COMPONENTES ======= */
 
 /* ======= START HEADER STYLES ======= */
@@ -302,7 +335,7 @@ img {
 }
 
 .team-member-description {
-  padding: 30px 10px;
+  padding: 30px 32px;
 }
 
 .team-member-name {
@@ -316,6 +349,7 @@ img {
 }
 
 .team-member-position {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
