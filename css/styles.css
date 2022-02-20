@@ -112,6 +112,17 @@ img {
   color: var(--secondary-text-color);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 .social-list {
   display: flex;
   justify-content: space-between;
@@ -143,14 +154,16 @@ img {
 
 /* ======= START HEADER STYLES ======= */
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  max-height: 80px;
+  /* padding-top: 24px; */
+  /* padding-bottom: 24px; */
   border-bottom: 1px solid var(--section-border-color);
 }
 
 .header-container {
   display: flex;
   align-items: center;
+  min-height: 80px;
 }
 
 .nav-list {
@@ -178,10 +191,13 @@ img {
 
 .header .contacts-list {
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
 .contacts-link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -196,6 +212,16 @@ img {
 
 .header .phone {
   margin-left: 50px;
+}
+
+.contacts-list-icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+
+.contacts-link:hover .contacts-list-icon,
+.contacts-link:focus .contacts-list-icon {
+  fill: var(--primary-accent-color);
 }
 
 /* ======= END HEADER STYLES ======= */
@@ -270,7 +296,17 @@ img {
   margin-right: 30px;
 }
 
-.features-title {
+.features-list-icon {
+  display: block;
+  width: 270px;
+  height: 120px;
+  padding: 24px 100px;
+  margin-bottom: 30px;
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
+}
+
+.features-list-title {
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 700;
@@ -373,8 +409,8 @@ img {
   justify-content: center;
   width: 170px;
   height: 92px;
-  fill: #afb1b8;
-  border: 1px solid #afb1b8;
+  fill: var(--social-list-icon-color);
+  border: 1px solid var(--social-list-icon-color);
   border-radius: 4px;
 }
 
@@ -414,7 +450,7 @@ img {
   max-height: 82px;
 }
 
-.contacts-list-item:not(:last-child) {
+.footer .contacts-list-item:not(:last-child) {
   margin-bottom: 8px;
 }
 
@@ -539,5 +575,11 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
+}
+
+.projects-list-link:hover .project-card,
+.projects-list-link:focus .project-card {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /* ======= END PORTFOLIO ======= */
